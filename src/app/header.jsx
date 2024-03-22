@@ -7,11 +7,11 @@ import { signIn, signOut, useSession } from "next-auth/react";
 
 export default function Header() {
   const session = useSession();
-  // console.log(session);
+
   return (
     <nav className="flex justify-between items-center p-4">
       <div className="flex gap-5">
-        <img src="/logo.png" alt="Logo" className="h-6 mr-3" />
+        <img src="/next.svg" alt="Logo" className="h-6 mr-3 dark:invert" />
         <Link
           className="self-center text-xl font-semibold whitespace-nowrap"
           href="/"
