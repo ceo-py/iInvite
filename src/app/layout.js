@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
+import Header from "./header";
+import { Providers } from "./provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,14 +13,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <ThemeProvider
-        attribute="class"
-        defaultTheme="system"
-        enableSystem
-        disableTransitionOnChange
-      >
-        <body className={inter.className}>{children}</body>
-      </ThemeProvider>
+      <body className={inter.className}>
+        <Providers>
+          <Header />
+          <div className="container mx-auto">{children}</div>
+        </Providers>
+      </body>
     </html>
   );
 }

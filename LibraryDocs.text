@@ -1,0 +1,8 @@
+next - https://nextjs.org/docs/app/building-your-application/routing
+auth - https://next-auth.js.org/configuration/initialization#route-handlers-app
+ui - https://ui.shadcn.com/docs/components/accordion
+
+
+db - https://www.prisma.io/docs
+migration - npx prisma generate
+npx prisma migrate dev
